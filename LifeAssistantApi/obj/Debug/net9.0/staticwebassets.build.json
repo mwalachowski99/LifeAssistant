@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "sKbY5SsO34SLdBZ3f08rMEjqaM0GlknoqLatz3PoVRw=",
+  "Source": "LifeAssistantApi",
+  "BasePath": "_content/LifeAssistantApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

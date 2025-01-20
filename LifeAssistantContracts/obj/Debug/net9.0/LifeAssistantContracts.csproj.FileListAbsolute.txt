@@ -1,0 +1,11 @@
+D:\Projekty\LifeAssistant\LifeAssistantContracts\bin\Debug\net9.0\LifeAssistantContracts.deps.json
+D:\Projekty\LifeAssistant\LifeAssistantContracts\bin\Debug\net9.0\LifeAssistantContracts.dll
+D:\Projekty\LifeAssistant\LifeAssistantContracts\bin\Debug\net9.0\LifeAssistantContracts.pdb
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.AssemblyInfoInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.AssemblyInfo.cs
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.csproj.CoreCompileInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.dll
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\refint\LifeAssistantContracts.dll
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.pdb
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\ref\LifeAssistantContracts.dll

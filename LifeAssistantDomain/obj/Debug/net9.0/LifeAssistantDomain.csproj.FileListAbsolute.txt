@@ -1,0 +1,11 @@
+D:\Projekty\LifeAssistant\LifeAssistantDomain\bin\Debug\net9.0\LifeAssistantDomain.deps.json
+D:\Projekty\LifeAssistant\LifeAssistantDomain\bin\Debug\net9.0\LifeAssistantDomain.dll
+D:\Projekty\LifeAssistant\LifeAssistantDomain\bin\Debug\net9.0\LifeAssistantDomain.pdb
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.AssemblyInfoInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.AssemblyInfo.cs
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.csproj.CoreCompileInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.dll
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\refint\LifeAssistantDomain.dll
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.pdb
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\ref\LifeAssistantDomain.dll

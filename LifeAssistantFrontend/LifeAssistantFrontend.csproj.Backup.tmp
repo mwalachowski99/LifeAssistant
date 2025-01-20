@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Client\LifeAssistant\public\" />
+    <Folder Include="Client\LifeAssistant\src\assets\" />
+    <Folder Include="Client\LifeAssistant\src\components\activities\" />
+    <Folder Include="Client\LifeAssistant\src\models\" />
+    <Folder Include="Client\LifeAssistant\src\interceptors\" />
+    <Folder Include="Client\LifeAssistant\src\api\" />
+    <Folder Include="Client\LifeAssistant\src\styles\" />
+    <Folder Include="Client\LifeAssistant\src\router\" />
+  </ItemGroup>
+
+</Project>

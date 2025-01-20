@@ -1,0 +1,17 @@
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\bin\Debug\net9.0\LifeAssistantInfrastructure.deps.json
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\bin\Debug\net9.0\LifeAssistantInfrastructure.runtimeconfig.json
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\bin\Debug\net9.0\LifeAssistantInfrastructure.dll
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\bin\Debug\net9.0\LifeAssistantInfrastructure.pdb
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\bin\Debug\net9.0\LifeAssistantDomain.dll
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\bin\Debug\net9.0\LifeAssistantDomain.pdb
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.csproj.AssemblyReference.cache
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.AssemblyInfoInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.AssemblyInfo.cs
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.csproj.CoreCompileInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssi.79FE39BB.Up2Date
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.dll
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\refint\LifeAssistantInfrastructure.dll
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.pdb
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.genruntimeconfig.cache
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\ref\LifeAssistantInfrastructure.dll
