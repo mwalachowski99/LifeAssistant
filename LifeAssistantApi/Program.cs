@@ -4,6 +4,8 @@ using LifeAssistantInfrastructure;
 using LifeAssistantApplication;
 using LifeAssistantApi.Modules;
 using LifeAssistantApi.Handlers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.BearerToken;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,16 @@ builder.Services.AddCors(opt =>
 builder.Services.AddApplication();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
 
+builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+    .AddEntityFrameworkStores<AppDbContext>();
+
+builder.Services.ConfigureAll<BearerTokenOptions>(option =>
+{
+    option.BearerTokenExpiration = TimeSpan.FromMinutes(1);
+});
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -38,9 +50,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseExceptionHandler(_ => { });
 app.UseCors("CorsPolicy");
+app.MapIdentityApi<IdentityUser>();
 app.UseHttpsRedirection();
 
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 //app.MapControllers();
 

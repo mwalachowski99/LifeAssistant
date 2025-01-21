@@ -17,3 +17,4 @@ D:\Projekty\LifeAssistant\LifeAssistantApplication\bin\Debug\net9.0\LifeAssistan
 D:\Projekty\LifeAssistant\LifeAssistantApplication\bin\Debug\net9.0\LifeAssistantDomain.pdb
 D:\Projekty\LifeAssistant\LifeAssistantApplication\obj\Debug\net9.0\LifeAssistantApplication.csproj.AssemblyReference.cache
 D:\Projekty\LifeAssistant\LifeAssistantApplication\obj\Debug\net9.0\LifeAssi.E92DF0D9.Up2Date
+D:\Projekty\LifeAssistant\LifeAssistantApplication\obj\Debug\net9.0\LifeAssistantApplication.sourcelink.json

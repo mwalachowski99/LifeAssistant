@@ -9,3 +9,4 @@ D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantC
 D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\refint\LifeAssistantContracts.dll
 D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.pdb
 D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\ref\LifeAssistantContracts.dll
+D:\Projekty\LifeAssistant\LifeAssistantContracts\obj\Debug\net9.0\LifeAssistantContracts.sourcelink.json

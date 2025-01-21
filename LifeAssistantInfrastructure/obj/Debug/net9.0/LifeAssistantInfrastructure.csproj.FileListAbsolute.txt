@@ -15,3 +15,4 @@ D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\refint\Li
 D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.pdb
 D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.genruntimeconfig.cache
 D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\ref\LifeAssistantInfrastructure.dll
+D:\Projekty\LifeAssistant\LifeAssistantInfrastructure\obj\Debug\net9.0\LifeAssistantInfrastructure.sourcelink.json

@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using LifeAssistantDomain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace LifeAssistantInfrastructure
 {
-    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext(options)
     {
         public DbSet<Activity> Activities => Set<Activity>();
 
@@ -17,14 +18,14 @@ namespace LifeAssistantInfrastructure
                 new Activity
                 {
                     Id = 1,
-                    Name = "Trening",
-                    Description = "xd"
+                    Name = "Siłownia",
+                    Description = "Trening na siłowni"
                 },
                 new Activity
                 {
                     Id = 2,
-                    Name = "Test",
-                    Description = "xd2"
+                    Name = "Basen",
+                    Description = "Pływanie"
                 }
              );
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LifeAssistantContracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+633f351d663e837f1771f90710cd85c6a9a4fa17")]
 [assembly: System.Reflection.AssemblyProductAttribute("LifeAssistantContracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LifeAssistantContracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

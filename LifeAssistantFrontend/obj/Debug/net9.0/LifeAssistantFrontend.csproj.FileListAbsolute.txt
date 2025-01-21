@@ -1,0 +1,12 @@
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\bin\Debug\net9.0\LifeAssistantFrontend.deps.json
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\bin\Debug\net9.0\LifeAssistantFrontend.dll
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\bin\Debug\net9.0\LifeAssistantFrontend.pdb
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.AssemblyInfoInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.AssemblyInfo.cs
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.csproj.CoreCompileInputs.cache
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.sourcelink.json
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.dll
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\refint\LifeAssistantFrontend.dll
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\LifeAssistantFrontend.pdb
+D:\Projekty\LifeAssistant\LifeAssistantFrontend\obj\Debug\net9.0\ref\LifeAssistantFrontend.dll

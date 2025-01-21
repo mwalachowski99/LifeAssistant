@@ -269,3 +269,9 @@ D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\LifeAssistantApplica
 D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\LifeAssistantContracts.pdb
 D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\FluentValidation.dll
 D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+D:\Projekty\LifeAssistant\LifeAssistantApi\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Projekty\LifeAssistant\LifeAssistantApi\obj\Debug\net9.0\LifeAssistantApi.sourcelink.json

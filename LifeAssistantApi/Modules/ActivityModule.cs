@@ -16,7 +16,7 @@ namespace LifeAssistantApi.Modules
             {
                 var activities = await mediator.Send(new GetActivitiesQuery(), ct);
                 return Results.Ok(activities);
-            }).WithTags("Activities");
+            }).WithTags("Activities").RequireAuthorization();
 
             app.MapGet("/api/activities/{id}", async (IMediator mediator, int id, CancellationToken ct) =>
             {
