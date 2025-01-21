@@ -11,15 +11,17 @@ function App() {
     useEffect(() => {
         setupErrorHandlingInterceptor()
     }, [])
-  return (
-      <>
-          {location.pathname === '/' ? <ActivityList /> : (
-              <Container className="container-style">
-                  <Outlet />
-              </Container>
-          ) }
-    </>
-  )
+    return (
+        <>
+            {location.pathname === '/' ? (
+                <ActivityList />
+            ) : (
+                <Container className="container-style">
+                    <Outlet />
+                </Container>
+            )}
+        </>
+    )
 }
 
 export default App

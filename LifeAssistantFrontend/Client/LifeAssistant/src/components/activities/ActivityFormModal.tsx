@@ -1,30 +1,34 @@
-import { Box, TextField } from "@mui/material";
-import BaseModal from "../modals/BaseModal";
-import RegularButton from "../buttons/regularButton";
-import SaveIcon from '@mui/icons-material/Save';
-import apiConnector from "../../api/apiConnector";
-import { ActivityDto } from "../../models/activityDto";
-import { ChangeEvent, useState } from "react";
+import { Box, TextField } from '@mui/material'
+import BaseModal from '../modals/BaseModal'
+import RegularButton from '../buttons/regularButton'
+import SaveIcon from '@mui/icons-material/Save'
+import apiConnector from '../../api/apiConnector'
+import { ActivityDto } from '../../models/activityDto'
+import { ChangeEvent, useState } from 'react'
 
 interface ActivityFormModalProps {
     isOpen: boolean
     handleClose: () => void
 }
-export default function ActivityFormModal({ isOpen, handleClose }: ActivityFormModalProps) {
+export default function ActivityFormModal({
+    isOpen,
+    handleClose,
+}: ActivityFormModalProps) {
     const [activity, setActivity] = useState<ActivityDto>({
         id: undefined,
-        name: "",
-        description: ""
-    });
+        name: '',
+        description: '',
+    })
 
     const onSubmit = () => {
         apiConnector.createActivity(activity).then(handleClose)
     }
 
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = event.target;
+    const handleInputChange = (
+        event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const { name, value } = event.target
         setActivity({ ...activity, [name]: value })
-         
     }
 
     return (
@@ -41,16 +45,16 @@ export default function ActivityFormModal({ isOpen, handleClose }: ActivityFormM
                     onChange={handleInputChange}
                     autoFocus
                     sx={{
-                        "& .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "#5A6CCB",
+                        '& .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#5A6CCB',
                         },
-                        "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
-                        {
-                            borderColor: "#5A6CCB",
-                        },
+                        '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline':
+                            {
+                                borderColor: '#5A6CCB',
+                            },
                     }}
                     error={false}
-                    helperText={""}
+                    helperText={''}
                 />
                 <TextField
                     margin="normal"
@@ -62,19 +66,23 @@ export default function ActivityFormModal({ isOpen, handleClose }: ActivityFormM
                     value={activity.description}
                     onChange={handleInputChange}
                     sx={{
-                        "& .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "#5A6CCB",
+                        '& .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#5A6CCB',
                         },
-                        "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
-                        {
-                            borderColor: "#5A6CCB",
-                        },
+                        '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline':
+                            {
+                                borderColor: '#5A6CCB',
+                            },
                     }}
                     error={false}
-                    helperText={""}
+                    helperText={''}
                 />
-                <RegularButton text={"SAVE"} image={<SaveIcon />} onClick={onSubmit} />
-                </Box>
+                <RegularButton
+                    text={'SAVE'}
+                    image={<SaveIcon />}
+                    onClick={onSubmit}
+                />
+            </Box>
         </BaseModal>
     )
 }

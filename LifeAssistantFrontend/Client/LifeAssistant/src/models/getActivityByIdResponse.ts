@@ -1,4 +1,4 @@
-import { ActivityDto } from "./activityDto";
+import { ActivityDto } from './activityDto'
 
 export interface GetActivityByIdResponse {
     activityDto: ActivityDto
