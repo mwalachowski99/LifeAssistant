@@ -9,3 +9,4 @@ D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDoma
 D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\refint\LifeAssistantDomain.dll
 D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.pdb
 D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\ref\LifeAssistantDomain.dll
+D:\Projekty\LifeAssistant\LifeAssistantDomain\obj\Debug\net9.0\LifeAssistantDomain.sourcelink.json

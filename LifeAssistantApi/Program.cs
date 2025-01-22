@@ -28,13 +28,14 @@ builder.Services.AddCors(opt =>
 });
 builder.Services.AddApplication();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.ConfigureAll<BearerTokenOptions>(option =>
 {
-    option.BearerTokenExpiration = TimeSpan.FromMinutes(1);
+    option.BearerTokenExpiration = TimeSpan.FromMinutes(5);
 });
 
 builder.Services.AddAuthorization();
@@ -52,6 +53,7 @@ app.UseExceptionHandler(_ => { });
 app.UseCors("CorsPolicy");
 app.MapIdentityApi<IdentityUser>();
 app.UseHttpsRedirection();
+
 
 app.UseAuthentication();
 app.UseAuthorization();

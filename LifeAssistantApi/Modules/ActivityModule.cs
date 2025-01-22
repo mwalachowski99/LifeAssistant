@@ -23,28 +23,28 @@ namespace LifeAssistantApi.Modules
                 var activity = await mediator.Send(new GetActivityByIdQuery(id));
                 return Results.Ok(activity);
 
-            }).WithTags("Activities");
+            }).WithTags("Activities").RequireAuthorization();
 
             app.MapPost("/api/activities", async (IMediator mediator, CreateActivityRequest createActivityRequest, CancellationToken ct) =>
             {
                 var command = new CreateActivityCommand(createActivityRequest.Name, createActivityRequest.Description);
                 var result = await mediator.Send(command, ct);
                 return Results.Ok(result);
-            }).WithTags("Activities");
+            }).WithTags("Activities").RequireAuthorization();
 
             app.MapPut("/api/activities/{id}", async (IMediator mediator, int id, UpdateActivityRequest updateActivityRequest, CancellationToken ct) =>
             {
                 var command = new UpdateActivityCommand(id, updateActivityRequest.Name, updateActivityRequest.Description);
                 var result = await mediator.Send(command, ct);
                 return Results.Ok(result);
-            }).WithTags("Activities");
+            }).WithTags("Activities").RequireAuthorization();
 
             app.MapDelete("/api/activities/{id}", async (IMediator mediator, int id, CancellationToken ct) =>
             {
                 var command = new DeleteActivityCommand(id);
                 var result= await mediator.Send(command, ct);
                 return Results.Ok(result);
-            }).WithTags("Activities");
+            }).WithTags("Activities").RequireAuthorization();
         }
     }
 }

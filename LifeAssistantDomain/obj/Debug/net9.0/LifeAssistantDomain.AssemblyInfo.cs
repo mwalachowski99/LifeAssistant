@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LifeAssistantDomain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0de82cfad62e2ba1b38e907c577a8d53aab35f35")]
 [assembly: System.Reflection.AssemblyProductAttribute("LifeAssistantDomain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LifeAssistantDomain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

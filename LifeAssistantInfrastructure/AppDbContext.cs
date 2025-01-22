@@ -10,24 +10,5 @@ namespace LifeAssistantInfrastructure
 
         public DbSet<DoneActivity> DoneActivities => Set<DoneActivity>();
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Activity>().HasData(
-                new Activity
-                {
-                    Id = 1,
-                    Name = "Siłownia",
-                    Description = "Trening na siłowni"
-                },
-                new Activity
-                {
-                    Id = 2,
-                    Name = "Basen",
-                    Description = "Pływanie"
-                }
-             );
-        }
     }
 }
