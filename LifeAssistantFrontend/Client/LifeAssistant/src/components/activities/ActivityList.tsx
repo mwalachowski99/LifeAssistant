@@ -4,21 +4,21 @@ import { ActivityDto } from '../../models/activityDto'
 import { useState, useEffect } from 'react'
 import apiConnector from '../../api/apiConnector'
 import ContentBox from '../containers/ContentBox'
-import RegularButton from '../buttons/regularButton'
 import AddIcon from '@mui/icons-material/Add'
 import ActivityFormModal from './ActivityFormModal'
+import { getActivities } from '../../actions/activities'
+import { useAppDispatch } from '../../store/useAppDispatch'
+import RegularButton from '../buttons/regularButton'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store/rootState'
 
 export default function ActivityList() {
-    const [activities, setActivities] = useState<ActivityDto[]>([])
     const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false)
+    const dispatch = useAppDispatch()
+    const { activities } = useSelector((state: RootState) => state.activities)
 
     useEffect(() => {
-        const fetchData = async () => {
-            const fetchedActivities = await apiConnector.getActivities()
-            setActivities(fetchedActivities)
-        }
-
-        fetchData()
+        dispatch(getActivities())
     }, [])
 
     return (
@@ -32,9 +32,10 @@ export default function ActivityList() {
                     padding="2%"
                     justifyContent="center"
                 >
-                    {activities.length !== 0 &&
-                        activities.map((activity) => (
+                    {activities?.length !== 0 &&
+                        activities?.map((activity: ActivityDto) => (
                             <ActivityListItem
+                                key={activity.id}
                                 name={activity.name}
                                 description={activity.description}
                             />

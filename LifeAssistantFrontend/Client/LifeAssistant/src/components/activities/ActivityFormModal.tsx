@@ -1,10 +1,12 @@
 import { Box, TextField } from '@mui/material'
 import BaseModal from '../modals/BaseModal'
-import RegularButton from '../buttons/regularButton'
 import SaveIcon from '@mui/icons-material/Save'
 import apiConnector from '../../api/apiConnector'
 import { ActivityDto } from '../../models/activityDto'
 import { ChangeEvent, useState } from 'react'
+import { useAppDispatch } from '../../store/useAppDispatch'
+import { addActivity } from '../../actions/activities'
+import RegularButton from '../buttons/regularButton'
 
 interface ActivityFormModalProps {
     isOpen: boolean
@@ -20,8 +22,10 @@ export default function ActivityFormModal({
         description: '',
     })
 
+    const dispatch = useAppDispatch()
+
     const onSubmit = () => {
-        apiConnector.createActivity(activity).then(handleClose)
+        dispatch(addActivity(activity)).then(handleClose)
     }
 
     const handleInputChange = (

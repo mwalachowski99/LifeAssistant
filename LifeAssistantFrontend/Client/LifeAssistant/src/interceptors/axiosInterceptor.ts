@@ -1,12 +1,15 @@
 import axios, { AxiosResponse } from 'axios'
+import store from '../store/store'
+import { refreshToken } from '../actions/auth'
 
 let isInterceptorSetup = false
+let isRefreshing = false
 
 export const setupErrorHandlingInterceptor = () => {
     if (!isInterceptorSetup) {
         axios.interceptors.response.use(
             (response: AxiosResponse) => response,
-            (error) => {
+            async (error) => {
                 if (error.response) {
                     const statusCode = error.response.status
                     const data = error.response.data
