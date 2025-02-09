@@ -11,15 +11,23 @@ import { useAppDispatch } from '../../store/useAppDispatch'
 import RegularButton from '../buttons/regularButton'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/rootState'
+import ActivityInfoModal from './ActivityInfoModal'
 
 export default function ActivityList() {
     const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false)
+    const [isInfoModalOpen, setIsInfoModalOpen] = useState<boolean>(false)
+    const [selectedActivity, setSelectedActivity] = useState<ActivityDto>()
     const dispatch = useAppDispatch()
     const { activities } = useSelector((state: RootState) => state.activities)
 
     useEffect(() => {
         dispatch(getActivities())
     }, [])
+
+    const openInfoModal = (activity: ActivityDto) => {
+        setSelectedActivity(activity)
+        setIsInfoModalOpen(true)
+    }
 
     return (
         <>
@@ -38,6 +46,7 @@ export default function ActivityList() {
                                 key={activity.id}
                                 name={activity.name}
                                 description={activity.description}
+                                openInfoModal={() => openInfoModal(activity)}
                             />
                         ))}
                 </Stack>
@@ -52,6 +61,11 @@ export default function ActivityList() {
             <ActivityFormModal
                 isOpen={isAddModalOpen}
                 handleClose={() => setIsAddModalOpen(false)}
+            />
+            <ActivityInfoModal
+                isOpen={isInfoModalOpen}
+                handleClose={() => setIsInfoModalOpen(false)}
+                activity={selectedActivity}
             />
         </>
     )

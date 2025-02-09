@@ -1,5 +1,5 @@
 import { Action } from '../actions/action'
-import { ADD_ACTIVITY, GET_ACTIVITIES } from '../actions/types'
+import { ADD_ACTIVITY, DELETE_ACTIVITY, GET_ACTIVITIES } from '../actions/types'
 import { ActivityDto } from '../models/activityDto'
 
 interface InitialState {
@@ -21,6 +21,13 @@ export default function (state: InitialState = initialState, action: Action) {
             return {
                 ...state,
                 activities: [...state.activities, action.payload.activityDto],
+            }
+        case DELETE_ACTIVITY:
+            return {
+                ...state,
+                activities: state.activities.filter(
+                    (activity) => activity.id !== action.payload
+                ),
             }
         default:
             return state

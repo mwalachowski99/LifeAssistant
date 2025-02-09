@@ -1,7 +1,6 @@
 import { Box, TextField } from '@mui/material'
 import BaseModal from '../modals/BaseModal'
 import SaveIcon from '@mui/icons-material/Save'
-import apiConnector from '../../api/apiConnector'
 import { ActivityDto } from '../../models/activityDto'
 import { ChangeEvent, useState } from 'react'
 import { useAppDispatch } from '../../store/useAppDispatch'
