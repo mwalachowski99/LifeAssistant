@@ -1,7 +1,8 @@
-﻿using MediatR;
+﻿using LifeAssistantContracts.Responses;
+using MediatR;
 
 namespace LifeAssistantApplication.Commands.Activities.UpdateActivity
 {
-    public record UpdateActivityCommand(int Id, string Name, string Description) : IRequest<Unit>;
+    public record UpdateActivityCommand(int Id, string Name, string Description) : IRequest<UpdateActivityResponse>;
     
 }

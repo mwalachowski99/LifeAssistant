@@ -16,7 +16,11 @@ import ActivityInfoModal from './ActivityInfoModal'
 export default function ActivityList() {
     const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false)
     const [isInfoModalOpen, setIsInfoModalOpen] = useState<boolean>(false)
-    const [selectedActivity, setSelectedActivity] = useState<ActivityDto>()
+    const [selectedActivity, setSelectedActivity] = useState<ActivityDto>({
+        name: '',
+        description: '',
+        id: 0,
+    })
     const dispatch = useAppDispatch()
     const { activities } = useSelector((state: RootState) => state.activities)
 
@@ -65,7 +69,7 @@ export default function ActivityList() {
             <ActivityInfoModal
                 isOpen={isInfoModalOpen}
                 handleClose={() => setIsInfoModalOpen(false)}
-                activity={selectedActivity}
+                currentActivity={selectedActivity}
             />
         </>
     )

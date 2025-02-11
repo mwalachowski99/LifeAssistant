@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LifeAssistantApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9fa91c795c4c04b647aad3ba5838a9c91ea91ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cff7a5abcd55f0d6348842c01dcdba0f71463b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("LifeAssistantApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LifeAssistantApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
