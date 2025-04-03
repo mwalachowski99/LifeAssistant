@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { BASE_URL } from '../../config'
-import { LOGOUT, REFRESH_TOKEN, SIGN_IN, AUTH_ERROR } from './types'
+import { LOGOUT, REFRESH_TOKEN, SIGN_IN, SIGN_UP, AUTH_ERROR } from './types'
 import { Action } from './action'
 import { RootState } from '../store/rootState'
 import { ThunkDispatch } from '@reduxjs/toolkit'
@@ -23,7 +23,6 @@ export const refreshToken =
                     payload: res.data,
                 })
                 localStorage.setItem('access', res.data.accessToken)
-                console.log('here')
             })
             .catch((err) => {
                 console.log(err)
@@ -65,12 +64,51 @@ export const signIn =
                 }
 
                 localStorage.setItem('access', tokens.access)
+
                 rememberMe
-                    ? sessionStorage.setItem('refresh', tokens.refresh)
-                    : localStorage.setItem('refresh', tokens.refresh)
+                    ? localStorage.setItem('refresh', tokens.refresh)
+                    : sessionStorage.setItem('refresh', tokens.refresh)
                 return
             })
             .catch((err) => {
                 console.log(err)
+                dispatch({
+                    type: AUTH_ERROR,
+                    payload: 'Invalid email or password',
+                })
+            })
+    }
+
+export const signUp =
+    (email: string, password: string) =>
+    async (
+        dispatch: ThunkDispatch<RootState, unknown, Action>,
+        getState: () => RootState
+    ) => {
+        await axios
+            .post(`${BASE_URL}/register`, { email, password })
+            .then((res) => {
+                dispatch({
+                    type: SIGN_UP,
+                    payload: res.data,
+                })
+
+                return
+            })
+            .catch((err) => {
+                const errors = Object.values(
+                    (err.response?.data?.errors as Record<string, string[]>) ||
+                        {}
+                )
+                const errorMessage =
+                    errors.length > 0 && Array.isArray(errors[0])
+                        ? errors[0][0]
+                        : 'Unknown error occured'
+
+                dispatch({
+                    type: AUTH_ERROR,
+                    payload: errorMessage,
+                })
+                throw err
             })
     }

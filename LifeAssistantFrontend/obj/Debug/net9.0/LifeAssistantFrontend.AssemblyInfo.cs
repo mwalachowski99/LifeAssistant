@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LifeAssistantFrontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c3d3a384be68c114a52c0803d96c4f8908c44d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1ba60afe10d9477adb17653afe927311f266966")]
 [assembly: System.Reflection.AssemblyProductAttribute("LifeAssistantFrontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LifeAssistantFrontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

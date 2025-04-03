@@ -1,9 +1,6 @@
 import axios, { AxiosResponse } from 'axios'
-import store from '../store/store'
-import { refreshToken } from '../actions/auth'
 
 let isInterceptorSetup = false
-let isRefreshing = false
 
 export const setupErrorHandlingInterceptor = () => {
     if (!isInterceptorSetup) {
@@ -19,7 +16,18 @@ export const setupErrorHandlingInterceptor = () => {
                             if (data.errors) {
                                 const modalStateErrors = []
 
-                                for (const item of data.errors) {
+                                const errors =
+                                    typeof data.errors === 'object' &&
+                                    !Array.isArray(data.errors)
+                                        ? Object.entries(data.errors).map(
+                                              ([property, value]) => ({
+                                                  property,
+                                                  errorMessage: value,
+                                              })
+                                          )
+                                        : data.errors
+
+                                for (const item of errors) {
                                     const property = item.property
                                     const errorMessage = item.errorMessage
 

@@ -1,6 +1,7 @@
 export const REFRESH_TOKEN = 'REFRESH_TOKEN'
 export const LOGOUT = 'LOGOUT'
 export const SIGN_IN = 'SIGN_IN'
+export const SIGN_UP = 'SIGN_UP'
 export const AUTH_ERROR = 'AUTH_ERROR'
 
 export const GET_ACTIVITIES = 'GET_ACTIVITIES'

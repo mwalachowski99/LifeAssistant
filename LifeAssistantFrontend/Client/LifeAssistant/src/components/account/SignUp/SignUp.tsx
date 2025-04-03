@@ -10,22 +10,20 @@ import Typography from '@mui/material/Typography'
 import AccountCard from '../AccountCard'
 import { darkGrey } from '../../../styles/colors'
 import { useAppDispatch } from '../../../store/useAppDispatch'
-import { signIn } from '../../../actions/auth'
+import { signUp, signIn } from '../../../actions/auth'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../../store/rootState'
 import { Navigate } from 'react-router-dom'
 import { useFormik } from 'formik'
-import signInBackground from '../../../../public/images/auth/signInBackground.jpg'
-
+import signUpBackground from '../../../../public/images/auth/signUpBackground.jpg'
 import * as Yup from 'yup'
 
 interface FormValues {
     email: string
     password: string
-    remember: boolean
 }
 
-export default function SignIn() {
+export default function SignUp() {
     const { isAuthenticated, errorMessage } = useSelector(
         (state: RootState) => state.auth
     )
@@ -34,20 +32,35 @@ export default function SignIn() {
 
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Invalid email').required('Required'),
-        password: Yup.string().required('Required'),
+        password: Yup.string()
+            .required('Required')
+            .min(6, 'Passwords must be at least 6 characters')
+            .max(30, 'Passwords must be at most 30 characters')
+            .matches(/.*[1-9].*/, 'Password must contain at least one number')
+            .matches(
+                /.*[A-Z].*/,
+                'Password must contain at least one uppercase letter'
+            )
+            .matches(
+                /^(?=.*[^a-zA-Z0-9]).+$/,
+                'Passwords must have at least one non alphanumeric character.'
+            ),
     })
 
     const onSubmit = (values: FormValues) => {
-        dispatch(
-            signIn(values.email ?? '', values.password ?? '', values.remember)
-        )
+        dispatch(signUp(values.email ?? '', values.password ?? ''))
+            .then(() =>
+                dispatch(
+                    signIn(values.email ?? '', values.password ?? '', false)
+                )
+            )
+            .catch()
     }
 
     const formik = useFormik({
         initialValues: {
             email: '',
             password: '',
-            remember: false,
         },
         validationSchema: validationSchema,
         onSubmit: onSubmit,
@@ -63,7 +76,7 @@ export default function SignIn() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundImage: `url(${signInBackground})`,
+                backgroundImage: `url(${signUpBackground})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
@@ -77,7 +90,7 @@ export default function SignIn() {
                         fontSize: 'clamp(2rem, 10vw, 2.15rem)',
                     }}
                 >
-                    Sign in
+                    Sign up
                 </Typography>
                 {errorMessage && (
                     <Typography color="error" sx={{ textAlign: 'center' }}>
@@ -126,29 +139,11 @@ export default function SignIn() {
                             formik.touched.password && formik.errors.password
                         }
                     />
-                    <FormControlLabel
-                        id="remember"
-                        name="remember"
-                        value={formik.values.remember}
-                        onChange={formik.handleChange}
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
-                    />
+
                     <Button type="submit" fullWidth variant="contained">
-                        Sign in
+                        Register
                     </Button>
-                    <Link
-                        component="button"
-                        type="button"
-                        //onClick={handleClickOpen}
-                        sx={{
-                            alignSelf: 'center',
-                            color: darkGrey,
-                        }}
-                    >
-                        Forgot your password?
-                    </Link>
-                    <Divider>or</Divider>
+
                     <Box
                         sx={{
                             display: 'flex',
@@ -157,15 +152,15 @@ export default function SignIn() {
                         }}
                     >
                         <Typography sx={{ textAlign: 'center' }}>
-                            Don&apos;t have an account?{' '}
+                            Already have an account?{' '}
                             <Link
-                                href="/SignUp/"
+                                href="/SignIn/"
                                 sx={{
                                     alignSelf: 'center',
                                     color: darkGrey,
                                 }}
                             >
-                                Sign up
+                                Sign in
                             </Link>
                         </Typography>
                     </Box>
